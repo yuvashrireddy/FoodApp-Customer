@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "176493195098",
+    "firebase_url": "https://foodapp-8a5e7.firebaseio.com",
+    "project_id": "foodapp-8a5e7",
+    "storage_bucket": "foodapp-8a5e7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:176493195098:android:cdad53e7d8a9a42e",
+        "android_client_info": {
+          "package_name": "com.example.hemapriya.foodapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "176493195098-q5kbcaqaqrhnlbc51jl3b14dmsml49j9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.hemapriya.foodapp",
+            "certificate_hash": "5f9e342d16cd063bace82b7890bd0386d5ec6536"
+          }
+        },
+        {
+          "client_id": "176493195098-61gicgphf6qq4hqra09sbi5ll8hrlj7m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDOOjRCdF_Oil_H6xVzno2rdqr3xoXqOV4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "176493195098-61gicgphf6qq4hqra09sbi5ll8hrlj7m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

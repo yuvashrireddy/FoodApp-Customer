@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProductDetailsActivity"
+    >
+
+
+    <TextView
+        android:id="@+id/product_price"
+        android:layout_width="215dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/product_name"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="51dp"
+        android:layout_marginRight="51dp"
+        android:gravity="center"
+        android:text="Food Price"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/product_name"
+        android:text="Food Name"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        android:gravity="center"
+        android:layout_marginTop="60dp"/>
+
+    <TextView
+        android:id="@+id/rs"
+        android:layout_width="36dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/product_name"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="144dp"
+        android:layout_marginLeft="144dp"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:text="RS"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/product_desc"
+        android:text="Food Description"
+        android:layout_below="@+id/product_price"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:layout_marginTop="40dp"/>
+    <com.cepheuen.elegantnumberbutton.view.ElegantNumberButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+    android:id="@+id/quantity"
+        android:elevation="6dp"
+        app:textSize="12dp"
+        app:initialNumber="1"
+        app:finalNumber="10"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/product_desc"
+        android:layout_marginTop="70dp"
+        >
+
+    </com.cepheuen.elegantnumberbutton.view.ElegantNumberButton>
+<Button
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/pd_add_to_cart"
+    android:background="@color/colorPrimaryDark"
+    android:layout_margin="15dp"
+    android:layout_alignParentBottom="true"
+    android:text="Add to Cart"
+    android:textColor="@android:color/white"
+    android:textSize="18dp"/>
+
+</RelativeLayout>

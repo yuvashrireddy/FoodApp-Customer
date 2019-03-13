@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#D13D3D</color>
+    <color name="colorPrimaryDark">#D13D3d</color>
+    <color name="colorAccent">#D13D3d</color>
+
+    <color name="sweetCorn">#ffffff</color>
+    <color name="sweetCorn_trans">#bbbbbb</color>
+</resources>

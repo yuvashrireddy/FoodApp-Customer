@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_margin="10dp"
+
+    app:cardElevation="15dp"
+
+    tools:context=".AdminNewOrdersActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:padding="10dp">
+
+        <TextView
+
+            android:id="@+id/order_user_name"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="UserName"
+            android:textColor="@color/colorPrimaryDark"
+
+            android:textSize="14dp"
+            android:textStyle="bold"
+
+            />
+
+        <TextView
+
+            android:id="@+id/order_phone_number"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:gravity="end"
+            android:text="Phone Number"
+            android:textAlignment="viewEnd"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="14dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/order_total_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/order_user_name"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="Total Price"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="14dp"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/order_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/order_total_price"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="Address"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="14dp"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/order_date_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/order_address"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="Date Time"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="14dp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/show_all_products"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/order_date_time"
+            android:layout_margin="20dp"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:visibility="invisible"
+            android:background="@color/colorPrimaryDark"
+            android:text="Show This Order"/>
+        <TextView
+            android:id="@+id/msg1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_centerVertical="true"
+            android:text="It's not too late to place a delicious order...!!"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="20dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dp"
+            android:visibility="gone"/>
+    </RelativeLayout>
+</RelativeLayout>
