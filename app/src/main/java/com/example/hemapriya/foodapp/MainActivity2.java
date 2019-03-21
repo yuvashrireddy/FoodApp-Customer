@@ -18,6 +18,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.ViewGroup;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -43,6 +44,7 @@ public class MainActivity2 extends AppCompatActivity
     private RecyclerView recyclerView;
     RecyclerView.LayoutManager layoutManager;
 
+    private ProgressBar progressBar;
     private DatabaseReference databaseReference;
     FirebaseUser firebaseUser;
     FirebaseAuth firebaseAuth;
@@ -91,6 +93,7 @@ public class MainActivity2 extends AppCompatActivity
 
         FoodRef=FirebaseDatabase.getInstance().getReference().child("Food");
 
+        progressBar=findViewById(R.id.progressbar);
         firebaseAuth=FirebaseAuth.getInstance();
         firebaseUser=firebaseAuth.getCurrentUser();
         databaseReference=FirebaseDatabase.getInstance().getReference("User").child(firebaseUser.getUid());
@@ -134,6 +137,7 @@ public class MainActivity2 extends AppCompatActivity
 
             @Override
             protected void onBindViewHolder(@NonNull ProductViewHolder holder, int position, @NonNull final Food model) {
+                progressBar.setVisibility(View.GONE);
                 holder.txtProductName.setText(model.getDish());
                 holder.txtProductPrice.setText("Price = RS "+model.getPrice());
 
@@ -183,7 +187,8 @@ public class MainActivity2 extends AppCompatActivity
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
-            return true;
+            Intent intent=new Intent(MainActivity2.this,UpdateActivity.class);
+            startActivity(intent);
         }
 
         return super.onOptionsItemSelected(item);
