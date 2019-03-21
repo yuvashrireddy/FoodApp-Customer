@@ -35,7 +35,7 @@ public class ConfirmFinalOrderActivity extends AppCompatActivity {
     private DatabaseReference databaseReference;
     FirebaseUser firebaseUser;
     FirebaseAuth firebaseAuth;
-    String totalAmount;
+    String totalAmount,name,phone;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,12 +65,14 @@ public class ConfirmFinalOrderActivity extends AppCompatActivity {
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                String phone=dataSnapshot.child("phoneNumber").getValue().toString();
+                phone=dataSnapshot.child("phoneNumber").getValue().toString();
                phnoEditText.setText(phone);
-                String name=dataSnapshot.child("username").getValue().toString();
+               name=dataSnapshot.child("username").getValue().toString();
                 nameEditText.setText(name);
                 String addr=dataSnapshot.child("address").getValue().toString();
                 addrEditText.setText(addr);
+
+
             }
 
             @Override
@@ -89,7 +91,7 @@ public class ConfirmFinalOrderActivity extends AppCompatActivity {
     private void Check() {
         String address=addrEditText.getText().toString();
         if(TextUtils.isEmpty(address)||address=="Update your address"){
-            addrEditText.setError("Please enter the username");
+            addrEditText.setError("Please enter the Address");
             addrEditText.requestFocus();
             return;
         }
@@ -120,7 +122,11 @@ public class ConfirmFinalOrderActivity extends AppCompatActivity {
         orderMap.put("state","not shipped");
 
 
-
+        User user=new User(name,phone,addrEditText.getText().toString());
+        firebaseUser=FirebaseAuth.getInstance().getCurrentUser();
+        String uid=firebaseUser.getUid();
+        DatabaseReference databaseUser= FirebaseDatabase.getInstance().getReference("User");
+        databaseUser.child(uid).setValue(user);
 
 
         orderRef.updateChildren(orderMap).addOnCompleteListener(new OnCompleteListener<Void>() {
